@@ -22,10 +22,7 @@ img.addEventListener("click", () => {
   audio.volume = volumeSlider.value / 100;
   audio.play();
 
-  // Вибрация (всегда включена, если поддерживается)
-  if (navigator.vibrate) {
-    navigator.vibrate(100);
-  }
+
 
   // Изображение
   if (altMode) {

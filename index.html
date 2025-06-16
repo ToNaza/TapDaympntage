@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaymontageCliker</title>
+
+    <link rel="icon" href="./media/my photo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>    <div class="he"><p>DaymontageCoin / Eblacoin Clicker</p></div>     <button onclick="openSettings()"><img src="./media/setting-2-svgrepo-com.svg"/></button>   </header>
+
+    <main> <div class="Valuet"><img src="./media/Eblacoin.png"/> <p id="coinCounter">0</p></div>
+    
+    <img id="butClick" src="./media/Ilya1.png"/>
+    
+    </main>
+
+    <footer>        <button onclick="openInfo()">Инфо</button>   <button onclick="withdrawCoins()">Вывод монеты</button>   <button onclick="upgrade()">Апгрейт</button>       </footer>
+
+
+<div id="settingsModal" class="settings-modal">
+  <div class="settings-content">
+    <span onclick="closeSettings()" class="settings-close">&times;</span>
+    <h2>Настройки</h2>
+
+    <!-- Регулятор звуку -->
+    <label for="volume">Громкость</label>
+    <input type="range" id="volume" min="0" max="100" value="50">
+
+    <!-- Вібрація -->
+    <div class="switch-group">
+      <label>Вибрация</label>
+      <div class="toggle-switch" onclick="toggleVibration(this)">
+        <div class="switch-knob"></div>
+      </div>
+    </div>
+
+    <!-- Теми -->
+    <div class="theme-buttons">
+      <button onclick="setTheme(1)">Тема 1</button>
+      <button onclick="setTheme(2)">Тема 2</button>
+      <button onclick="setTheme(3)">Тема 3</button>
+    </div>
+
+    <!-- Звук кліку -->
+    <div class="switch-group">
+      <label>Тип клика</label>
+      <div class="toggle-switch" onclick="toggleClickSound(this)">
+        <div class="switch-knob"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="infoModal" class="info-modal">
+  <div class="info-content">
+    <span onclick="closeInfo()" class="info-close">&times;</span>
+    <p>⚠️ Данный сайт создан исключительно в развлекательных целях, вы не сможете себе накликать миллиарды Еблакоинов и вывести их в реальную персональную валюту на Twitch-канале Деймана ⚠️<br>
+<br>
+Про функционал: сайт имеет несколько видов заднего фона и 2 вида звукового сопровождения при нажатии на Деймана, имеется встроенный регулятор звука и отключение вибро-режима, если вы на телефоне<br>
+<br>
+Разработчика сайта вы сможете найти в ТГ под юзернеймом @fikys_is<br></p>
+  </div>
+</div>
+
+
+<script src="./script.js" defer></script>
+<script src="./pat.js" defer></script>
+<script src="./vibro.js" defer></script>
+
+</body>
+</html>

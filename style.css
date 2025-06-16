@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Основні налаштування фону для повного екрану */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(180deg, rgba(255, 98, 0, 1) 0%, rgba(255, 21, 0, 1) 50%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background 0.5s ease;
+}
+
+/* Заготовки для інших кольорових схем */
+
+/* Тема 1 — помаранчево-червона */
+.theme-1 {
+  background: linear-gradient(180deg, rgba(255, 98, 0, 1) 0%, rgba(255, 21, 0, 1) 50%);
+}
+
+/* Тема 2 — синя */
+.theme-2 {
+  background: linear-gradient(360deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 115, 255, 1) 100%);
+}
+
+/* Тема 3 — фіолетово-рожева */
+.theme-3 {
+  background: linear-gradient(180deg, rgba(255, 0, 234, 1) 0%, rgba(47, 0, 112, 1) 100%);
+}
+
+
+header{
+    padding-top: 20px;
+    display: flex;
+
+    .he{
+        background: linear-gradient(90deg, rgba(255, 0, 0, 0.3) 0%, rgba(255, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+
+        width: 500px;
+        height: 30px;
+
+        p{
+            margin: 3px;
+            font-size: 20px;
+        }
+    }
+
+    button{
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        position: absolute;
+        right: 0;
+        margin-right: 10px;
+        background-color: rgb(148, 148, 148);
+
+        
+
+        img{
+            width: 25px;
+            height: 25px;
+            margin-top: 1px;
+        }
+    }
+
+}
+
+@media (max-width: 700px){
+    header{
+    .he{
+        width: 300px;
+        height: 25px;
+
+        p{
+            font-size: 15px;
+            margin: 4px;
+        }
+    }
+
+    button{
+        width: 25px;
+        height: 25px;
+
+        img{
+            width: 17px;
+            height: 17px;
+            margin-top: 2px;
+        }
+    }
+    }
+}
+
+
+main{
+
+    .Valuet{
+        display: flex;
+        margin: auto;
+        width: 300px;
+        height: 40px;
+        background-color: rgba(255, 0, 0, 0.37);
+        border-radius: 20px;
+        margin-top: 50px;
+
+        img{
+            width: 35px;
+            height: 35px;
+            border-radius: 20px;
+            margin: 2.5px;
+        }
+
+        p{
+            font-size: 20px;
+            margin-top: 9px;
+        }
+    }
+
+    #butClick{
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 700px){
+
+main{
+
+    .Valuet{
+        width: 250px;
+        height: 40px;
+
+            }
+    }
+
+}
+
+footer{
+    text-align: center;
+    margin-top: 100px;
+    
+
+    button{
+        width: 150px;
+        height: 50px;
+        border-radius: 20px;
+        background-color: rgb(124, 124, 124);
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 700px){
+
+    footer{
+        button{
+            width: 90px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+/* ===== Настройки ===== */
+.settings-modal {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.settings-content {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.settings-close {
+  cursor: pointer;
+  float: right;
+  font-size: 20px;
+  color: red;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOutRight {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+
+/* ===== Инфо ===== */
+.info-modal {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.info-content {
+  background-color: #eef;
+  border: 1px solid #88a;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 20px 20px 00px 00px;
+
+  p{
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 700px){
+    .info-content {
+          width: 300px;
+    }
+}
+
+
+.info-close {
+  cursor: pointer;
+  float: right;
+  font-size: 18px;
+  color: darkblue;
+}
+
+@keyframes slideInUp {
+  from { transform: translate(-50%, 100%); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}
+
+@keyframes slideOutDown {
+  from { transform: translate(-50%, 0); opacity: 1; }
+  to { transform: translate(-50%, 100%); opacity: 0; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Стиль для ползунка */
+#volume {
+  width: 100%;
+  margin: 10px 0 20px;
+}
+
+/* Переключатель (тумблер) */
+.toggle-switch {
+  width: 60px;
+  height: 30px;
+  background-color: #e74c3c;
+  border-radius: 30px;
+  position: relative;
+  transition: background 0.3s;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.toggle-switch.active {
+  background-color: #2ecc71;
+}
+
+.switch-knob {
+  width: 26px;
+  height: 26px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s;
+}
+
+.toggle-switch.active .switch-knob {
+  left: 32px;
+}
+
+/* Групи перемикачів */
+.switch-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+/* Теми */
+.theme-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.theme-buttons button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.theme-buttons button:hover {
+  background-color: #aaa;
+}
+
+

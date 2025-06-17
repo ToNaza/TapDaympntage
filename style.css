@@ -145,6 +145,20 @@ main{
 
 }
 
+
+  #achievement {
+    position: fixed;
+    top: 20px;
+    right: -250px;
+    width: 200px;
+    transition: right 0.5s ease;
+    z-index: 9999;
+  }
+
+  #achievement.show {
+    right: 20px;
+  }
+
 footer{
     text-align: center;
     margin-top: 100px;
